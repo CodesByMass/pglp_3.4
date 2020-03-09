@@ -1,2 +1,2 @@
-# pglp_3.4
-Illustration du principe de ségrégation des interfaces (ISP)
+# pglp_3.3
+Illustration du principe de substitution de Liskov (LSP)
