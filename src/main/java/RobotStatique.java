@@ -1,9 +1,16 @@
 
-public class RobotStatique extends Robot {
+public class RobotStatique {
+
+	private  Position position ;
+	private Direction direction ;
 
 	public RobotStatique(Position position, Direction direction) {
-		super(position, direction);
-		// TODO Auto-generated constructor stub
+		this.position = position ;
+		this.direction = direction ;
+	}
+
+	public void avancer() {
+		throw new UnsupportedOperationException() ;
 	}
 
 }
