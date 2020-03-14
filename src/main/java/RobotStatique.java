@@ -1,4 +1,11 @@
-
+/**
+ * a Static Robot, ain't able to move.
+ *
+ * @author Mass'
+ *
+ * @version 1.0
+ *
+ */
 public class RobotStatique {
 
 	private Position position ;
@@ -17,6 +24,9 @@ public class RobotStatique {
 		return this.direction ;
 	}
 
+	/**
+	 * @exception UnsupportedOperationException The Robot is static ;
+	 */
 	public void avancer() {
 		throw new UnsupportedOperationException() ;
 	}

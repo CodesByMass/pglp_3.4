@@ -2,7 +2,13 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
+/**
+ *
+ * @author Mass'
+ *
+ * @version 1.0
+ *
+ */
 public class RobotTest {
 
 	Robot r ;
@@ -23,10 +29,17 @@ public class RobotTest {
 		assertEquals(r.getDirection(),Direction.NORD);
 	}
 
+	/**
+	 * The Robot should move north if his direction is North(NORD)
+	 */
 	@Test
 	public void testAvancer() {
+		r.avancer();
+		assertEquals(r.getPosition().y,2);
 	}
-
+	/**
+	 * An object must turn a quarter turn.
+	 */
 	@Test
 	public void testTourner() {
 		r.tourner();

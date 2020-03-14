@@ -1,17 +1,40 @@
 import java.util.ArrayList;
-
+/**
+ * Holds all the robots in the game, the main class that move the dynamic robots.
+ *
+ * @author Mass'
+ *
+ * @version 1.0
+ *
+ */
 public class AllRobots {
 
+	/**
+	 * Contains the dynamic robots.
+	 */
 	private final static ArrayList<Robot> listRobots = new ArrayList<Robot>();
 
+	/**
+	 * Function called implicitly every time a dynamic robot is created.
+	 * @see Robot#Robot(Position, Direction)
+	 *
+	 * @param r The Robot instantiated
+	 */
 	public static void addRobot(Robot r) {
 		listRobots.add(r) ;
 	}
 
+	/**
+	 *
+	 * @return The list of all the dynamic robots.
+	 */
 	public static ArrayList<Robot> getListRobots() {
 		return listRobots ;
 	}
 
+	/**
+	 * Moves all the dynamic robots according to their respective direction.
+	 */
 	public static void avancerTous() {
 
 		for (Robot r :listRobots) {

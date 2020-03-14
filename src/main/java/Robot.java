@@ -1,9 +1,23 @@
-
+/**
+ * A dynamic robot moving on a 2D platform.
+ *
+ * @author Mass'
+ *
+ * @version 1.0
+ */
 public class Robot {
 
 	private Position position ;
 	private Direction direction ;
 
+	/**
+	 * This constructor implicitly call the <i>addRobot()</i> method from the <i>AllRobots class</i> </br>
+	 *
+	 * @see AllRobots#addRobot(Robot)
+	 *
+	 * @param position
+	 * @param direction
+	 */
 	public Robot(Position position ,Direction direction ){
 		this.direction=direction;
 		this.position=position ;
@@ -18,7 +32,9 @@ public class Robot {
 		return this.direction ;
 	}
 
-
+	/**
+	 * The method moves the robot according to the direction where it points to.
+	 */
 	public void avancer() {
 		switch (this.direction) {
 		case NORD:
@@ -33,6 +49,9 @@ public class Robot {
 		}
 	}
 
+	/**
+	 * The method turns the robot based on its actual direction.
+	 */
 	public void tourner() {
 		switch (this.direction) {
 		case NORD:
