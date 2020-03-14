@@ -24,4 +24,9 @@ public class PositionTest {
 		assertEquals(p.y,-1) ;
 	}
 
+	@Test
+	public void testEquals() {
+		assertEquals(p, new Position(0,0)) ;
+	}
+
 }

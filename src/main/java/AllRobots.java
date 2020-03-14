@@ -1,14 +1,18 @@
-import java.util.HashSet;
+import java.util.ArrayList;
 
 public class AllRobots {
 
-	private final static HashSet<Robot> listRobots = new HashSet<Robot>();
+	private final static ArrayList<Robot> listRobots = new ArrayList<Robot>();
 
 	public static void addRobot(Robot r) {
 		listRobots.add(r) ;
 	}
 
-	public void avancerTous() {
+	public static ArrayList<Robot> getListRobots() {
+		return listRobots ;
+	}
+
+	public static void avancerTous() {
 
 		for (Robot r :listRobots) {
 			r.avancer();
@@ -17,7 +21,11 @@ public class AllRobots {
 
 	public static void main( String[] args )
 	{
-
+		new Robot(new Position(0,0), Direction.SUD) ;
+		new Robot(new Position(3,1), Direction.EST) ;
+		new Robot(new Position(1,2), Direction.NORD) ;
+		new RobotStatique(new Position(0,5), Direction.SUD) ;
+		avancerTous() ;
 	}
 }
 
