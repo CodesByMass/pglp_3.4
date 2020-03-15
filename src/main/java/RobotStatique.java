@@ -8,27 +8,29 @@
  */
 public class RobotStatique {
 
-	private Position position ;
-	private Direction direction ;
+  private Position position;
+  private Direction direction;
 
-	public RobotStatique(Position position, Direction direction) {
-		this.position = position ;
-		this.direction = direction ;
-	}
+  public RobotStatique(Position position, Direction direction) {
+    this.position = position;
+    this.direction = direction;
+  }
 
-	public Position getPosition() {
-		return this.position ;
-	}
+  public Position getPosition() {
+    return this.position;
+  }
 
-	public Direction getDirection() {
-		return this.direction ;
-	}
+  public Direction getDirection() {
+    return this.direction;
+  }
 
-	/**
-	 * @exception UnsupportedOperationException The Robot is static ;
-	 */
-	public void avancer() {
-		throw new UnsupportedOperationException() ;
-	}
+  /**
+   * This method throws an exception because a static robot can't move.
+   *
+   * @exception UnsupportedOperationException when the method is called
+   */
+  public void avancer() {
+    throw new UnsupportedOperationException();
+  }
 
 }
